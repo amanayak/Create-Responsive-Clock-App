@@ -5,5 +5,3 @@
 
 
 ![Clock App](/preview.png)
-=======
->>>>>>> d851160cd674a59cfe8a792e719c3bcfa30141c8
