@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 :root {
-  --primary-color: #40b89c;
-  --bg-color: #fff;
+  --primary-color: #010101;
+  --bg-color: #ffffff;
 }
 
 * {
@@ -11,13 +11,15 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #228f75;
+  background-color: #010101;
 }
+
 .container {
   width: 400px;
   height: 800px;
@@ -25,6 +27,7 @@ body {
   padding: 20px;
   background-color: var(--bg-color);
 }
+
 .clock-wrapper {
   position: relative;
   width: 100%;
@@ -34,6 +37,7 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
 .clock-wrapper .clock {
   position: relative;
   width: 250px;
@@ -41,6 +45,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 0 0 1px #228f7621, 0 5px 15px #228f7663;
 }
+
 .clock .hand {
   width: 2px;
   height: 40%;
@@ -52,18 +57,22 @@ body {
   background-color: var(--primary-color);
   z-index: 1;
 }
+
 .clock .hand.hour-hand {
   height: 25%;
   transform: rotate(-90deg);
 }
+
 .clock .hand.minute-hand {
   height: 30%;
   transform: rotate(90deg);
 }
+
 .clock .hand.second-hand {
   height: 35%;
   transform: rotate(180deg);
 }
+
 .clock .center {
   position: absolute;
   top: 50%;
@@ -76,6 +85,7 @@ body {
   background-color: var(--bg-color);
   z-index: 1;
 }
+
 .clock .numbers {
   position: absolute;
   width: 90%;
@@ -84,6 +94,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) rotate(90deg);
 }
+
 .clock .number {
   position: absolute;
   width: 100%;
@@ -92,6 +103,7 @@ body {
   align-items: center;
   transform: rotate(calc(var(--i) * 30deg));
 }
+
 .clock .number span {
   position: relative;
   color: var(--primary-color);
@@ -99,10 +111,12 @@ body {
   font-weight: 800;
   transform: rotate(calc(var(--i) * -30deg - 90deg));
 }
+
 .clock .number:nth-child(3n) span {
   font-size: 20px;
   font-weight: 700;
 }
+
 .clock .lines {
   position: absolute;
   width: 100%;
@@ -114,6 +128,7 @@ body {
   justify-content: center;
   transform: translate(-50%, -50%) rotate(45deg);
 }
+
 .clock .line {
   position: absolute;
   width: 1px;
@@ -123,6 +138,7 @@ body {
   transform: rotate(calc(var(--i) * 30deg));
   background-color: var(--primary-color);
 }
+
 .clock .line::after {
   content: "";
   position: absolute;
@@ -133,6 +149,7 @@ body {
   transform: translate(-50%, -50%);
   background-color: var(--bg-color);
 }
+
 .clock-wrapper .am-pm {
   position: absolute;
   top: 50%;
@@ -145,9 +162,11 @@ body {
   font-weight: 500;
   color: var(--primary-color);
 }
+
 .am-pm div {
   position: relative;
 }
+
 .am-pm div::before {
   content: "";
   position: absolute;
@@ -160,12 +179,15 @@ body {
   transform: translate(-50%, -50%);
   z-index: -1;
 }
+
 .am-pm div.active {
   color: var(--bg-color);
 }
+
 .am-pm div.active::before {
   background-color: var(--primary-color);
 }
+
 .alarms {
   position: relative;
   margin-top: 80px;
@@ -177,6 +199,7 @@ body {
   gap: 10px;
   grid-template-columns: repeat(2, 1fr);
 }
+
 .alarms .alarm {
   position: relative;
   display: flex;
@@ -191,19 +214,23 @@ body {
   box-shadow: 0 0 0 1px #228f7621, 0 3px 5px #228f7663;
   transition: all 0.3s ease;
 }
+
 .alarms .alarm:hover {
   transform: scale(1.02);
 }
+
 .alarm .head {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
 .alarm .name {
   font-size: 12px;
   font-weight: 700;
   color: var(--primary-color);
 }
+
 .alarm .body {
   width: 100%;
   display: flex;
@@ -211,17 +238,20 @@ body {
   justify-content: space-between;
   gap: 10px;
 }
+
 .alarm .time {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--primary-color);
 }
+
 .alarm .days .day {
   font-size: 12px;
   font-weight: 700;
   color: var(--primary-color);
 }
+
 .alarm .delete {
   position: absolute;
   top: -5px;
@@ -239,14 +269,17 @@ body {
   color: var(--bg-color);
   transition: all 0.3s ease;
 }
+
 .alarm .delete img {
   pointer-events: none;
   width: 60%;
 }
+
 .alarm:hover .delete {
   opacity: 1;
   visibility: visible;
 }
+
 .alarms .no-alarms {
   position: absolute;
   top: 50%;
@@ -257,6 +290,7 @@ body {
   font-weight: 700;
   color: var(--primary-color);
 }
+
 #add-alarm-btn {
   position: absolute;
   bottom: 20px;
@@ -274,10 +308,12 @@ body {
   text-transform: uppercase;
   background-color: var(--primary-color);
 }
+
 .toggle {
   position: relative;
   width: max-content;
 }
+
 .toggle .track {
   width: 50px;
   height: 25px;
@@ -286,6 +322,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .toggle .thumb {
   position: absolute;
   width: 20px;
@@ -299,11 +336,13 @@ body {
   transition: all 0.3s ease;
   z-index: 1;
 }
-.toggle .checkbox:checked ~ .thumb {
+
+.toggle .checkbox:checked~.thumb {
   left: 28px;
   background-color: var(--bg-color);
 }
-.toggle .checkbox:checked ~ .track {
+
+.toggle .checkbox:checked~.track {
   background-color: var(--primary-color);
 }
 
@@ -322,10 +361,12 @@ body {
   visibility: hidden;
   transition: all 0.3s;
 }
+
 .modal.active {
   opacity: 1;
   visibility: visible;
 }
+
 .modal .content {
   position: relative;
   width: 400px;
@@ -334,6 +375,7 @@ body {
   padding: 20px;
   box-shadow: 0 0 0 1px #228f7621, 0 3px 15px #228f7663;
 }
+
 .modal .content .head {
   display: flex;
   align-items: center;
@@ -341,27 +383,32 @@ body {
   gap: 10px;
   margin-bottom: 20px;
 }
+
 .modal .head {
   font-size: 20px;
   font-weight: 700;
   color: var(--primary-color);
 }
+
 .modal .close {
   cursor: pointer;
 }
+
 .modal .body {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 10px;
 }
+
 .modal .time {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
 }
-.modal .time > div {
+
+.modal .time>div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -369,13 +416,16 @@ body {
   font-weight: 700;
   color: var(--primary-color);
 }
-.modal .time > div div:not(.number) {
+
+.modal .time>div div:not(.number) {
   cursor: pointer;
 }
+
 .modal .days {
   display: flex;
   gap: 10px;
 }
+
 .modal .day {
   width: 20px;
   height: 20px;
@@ -388,6 +438,7 @@ body {
   font-weight: 700;
   color: var(--primary-color);
 }
+
 .modal .day.active {
   color: var(--bg-color);
   background-color: var(--primary-color);
@@ -400,6 +451,7 @@ body {
   gap: 10px;
   margin-top: 20px;
 }
+
 .modal .footer .btn {
   font-size: 12px;
   font-weight: 700;
@@ -409,14 +461,17 @@ body {
   cursor: pointer;
   text-transform: uppercase;
 }
+
 .modal .footer .btn.save {
   color: var(--bg-color);
   background-color: var(--primary-color);
 }
+
 .modal .footer .btn.cancel {
   color: var(--primary-color);
   background-color: #228f763d;
 }
+
 .modal input[type="text"] {
   width: 100%;
   height: 40px;
